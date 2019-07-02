@@ -29,31 +29,29 @@ function Form(props) {
   }
 
   return (
-    <>
-      <div className='form-container'>
-        <div  className='form-container--header'>{formLabel}</div>
-        <div className='form-container--main'>
-          <form className='form-group' onSubmit={handleSubmit}>
-            <div className='form-group--input'>
-              <label className='input-label' htmlFor='numberField'>Enter Number</label>
-              <input
-                className='input-control'
-                type='text'
-                name='number'
-                id='input-value'
-                value={props.inputNumber}
-                onChange={handleChange}
-              />
-            </div>
-            <div className='form-group--submit'>
-              <input className='input-button' type='submit' value='Get Median'/>
-            </div>
-          </form>
-          <div className='form-input-error'>{props.error}</div>
-          <div className='form-output'>{displayData()}</div>
-        </div>
+    <div className='form-container'>
+      <div  className='form-container--header'>{formLabel}</div>
+      <div className='form-container--main'>
+        <form className='form-group' onSubmit={handleSubmit}>
+          <div className='form-group--input'>
+            <label className='input-label' htmlFor='numberField'>Enter Number</label>
+            <input
+              className='input-control'
+              type='text'
+              name='number'
+              id='input-value'
+              value={props.inputNumber}
+              onChange={handleChange}
+            />
+          </div>
+          <div className='form-group--submit'>
+            <input className='input-button' type='submit' value='Get Median'/>
+          </div>
+        </form>
+        <div className='form-input-error'>{props.error}</div>
+        <div className='form-output'>{displayData()}</div>
       </div>
-    </>
+    </div>
   );
 }
 
